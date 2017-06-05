@@ -1,6 +1,6 @@
 # from-callbacks-to-util.promisify
 We can see the evolution from callbacks to promises. New Node.js 8 feature 'util.promisify()' alllow us to convert I/O functions that return callbacks into I/O functions that return promises.
-We could promisify I/O functions before Node 8 with third party modules such as *bluebird or Q*.
+We could promisify I/O functions before Node 8 with third party modules such as [bluebird](https://www.npmjs.com/package/bluebird) or [Q](https://www.npmjs.com/package/q).
 
 ```js
 /* AUTHOR: mrm8488@gmail.com */
