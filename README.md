@@ -52,3 +52,6 @@ writeFile('/tmp/test3.js',"console.log('Hello world with promisify!');")
 
 .catch(error => console.log(error));
 ```
+
+## Thanks!
+![](https://media.giphy.com/media/jUwpNzg9IcyrK/giphy.gif)
