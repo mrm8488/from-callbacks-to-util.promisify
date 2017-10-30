@@ -53,5 +53,24 @@ writeFile('/tmp/test3.js',"console.log('Hello world with promisify!');")
 .catch(error => console.log(error));
 ```
 
+/* async/await version */
+
+const {promisify} = require('util');
+
+const writeFile = promisify(fs.writeFile);
+
+async writeFileFunction(target, content){
+	try{
+		await writeFile(target, content);
+	}catch(error){
+		console.error(error);
+	}
+
+};
+
+writeFileFunction('/tmp/test3.js',"console.log('Hello world with promisify!');
+
+```
+
 ## Thanks!
 ![](https://media.giphy.com/media/jUwpNzg9IcyrK/giphy.gif)
