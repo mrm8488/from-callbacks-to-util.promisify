@@ -51,7 +51,7 @@ writeFile('/tmp/test3.js',"console.log('Hello world with promisify!');")
 .then(() => console.log('file created successfully with promisify!'))
 
 .catch(error => console.log(error));
-```
+
 
 /* async/await version */
 
@@ -68,7 +68,7 @@ async writeFileFunction(target, content){
 
 };
 
-writeFileFunction('/tmp/test3.js',"console.log('Hello world with promisify!');
+writeFileFunction('/tmp/test4.js',"console.log('Hello world with promisify and async/await!');");
 
 ```
 
