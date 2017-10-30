@@ -71,6 +71,9 @@ async writeFileFunction(target, content){
 writeFileFunction('/tmp/test4.js',"console.log('Hello world with promisify and async/await!');");
 
 ```
-
+## Removing created test files
+```sh
+rm /tmp/test*.js
+```
 ## Thanks!
 ![](https://media.giphy.com/media/jUwpNzg9IcyrK/giphy.gif)
