@@ -10,7 +10,7 @@ const fs = require('fs');
 
 fs.writeFile('/tmp/test.js',"console.log('Hello world');", error => {
 
-	if(error) return console.log(error);
+	if(error) return console.error(error);
 
 	return console.log('file created successfully!')
 });
@@ -36,7 +36,7 @@ writeFilePromise('/tmp/test2.js', "console.log('Hello world with handcrafted pro
 
 .then(result => console.log(result))
 
-.catch(error => console.log(error));
+.catch(error => console.error(error));
 
 
 
@@ -50,7 +50,7 @@ writeFile('/tmp/test3.js',"console.log('Hello world with promisify!');")
 
 .then(() => console.log('file created successfully with promisify!'))
 
-.catch(error => console.log(error));
+.catch(error => console.error(error));
 
 
 /* async/await version */
@@ -59,14 +59,14 @@ const {promisify} = require('util');
 
 const writeFile = promisify(fs.writeFile);
 
-async writeFileFunction(target, content){
-	try{
-		await writeFile(target, content);
-	}catch(error){
-		console.error(error);
-	}
-
-};
+async function writeFileFunction(target, content) {
+  try {
+    await writeFile(target, content);
+    console.log("file created successfully with promisify and async/await!");
+  } catch (error) {
+    console.error(error);
+  }
+}
 
 writeFileFunction('/tmp/test4.js',"console.log('Hello world with promisify and async/await!');");
 
